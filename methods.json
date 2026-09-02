@@ -1,0 +1,2566 @@
+{
+  "schema_version": "2.1.0",
+  "methods": [
+    {
+      "id": "strong-lensing-time-delay-cosmography-tdc",
+      "name": "strong-lensing time-delay cosmography (TDC)",
+      "principle": "geometric",
+      "details": "Distance:\nThe optical paths differ in length and gravitational potential, leading to a temporal difference in arrival time.\nThe time delay is measured by comparing the light curves of multiple images.\nHigh-resolution imaging together with an assumed lens model or velocity dispersion helps to reduce mass-sheet degeneracy, hence constrain the Fermat potential differences.\nSpatially resolved kinematics provide additional constraints to reduce the mass-anisotropy degeneracy.\nThe time-delay distance can be calculated from the Fermat-potential differences and time delay.\nRedshift:\nSpectroscopic redshifts of the lens and source obtained using absorption or emission lines are used.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "lens: 0.2-0.8\nsource: 1-3",
+        "components": [
+          {
+            "role": "lens",
+            "min": 0.2,
+            "max": 0.8
+          },
+          {
+            "role": "source",
+            "min": 1.0,
+            "max": 3.0
+          }
+        ],
+        "z_max": 3.0,
+        "z_max_all_components": 3.0
+      },
+      "references": [
+        {
+          "text": "Birrer et al. 2024",
+          "url": "https://doi.org/10.1007/s11214-024-01079-w"
+        },
+        {
+          "text": "Collaboration et al. 2025",
+          "url": "https://doi.org/10.1051/0004-6361/202555801"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "(lensed) quasar"
+            },
+            {
+              "controlled_vocabulary": "transient",
+              "description": "(lensed) supernova"
+            },
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxy (lens)"
+            },
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "cluster (lens)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "high-resolution optical/near-IR imaging (e.g. HST/WFC3; or 8–10 m ground-based adaptive optics, e.g. Keck/NIR2)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "image"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "Fermat potential"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "(lensed) quasar"
+            },
+            {
+              "controlled_vocabulary": "transient",
+              "description": "(lensed) supernova"
+            },
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxy (lens)"
+            },
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "cluster (lens)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "1–2 m optical telescope with at least 6-8 month photometric monitoring (e.g. Euler 1.2 m/EulerCam)"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "1–2 m optical telescope with at least 6-8 month photometric monitoring (e.g. Euler 1.2 m/EulerCam)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "time delay"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "(lensed) quasar"
+            },
+            {
+              "controlled_vocabulary": "transient",
+              "description": "(lensed) supernova"
+            },
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxy (lens)"
+            },
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "cluster (lens)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "integral-field or slit spectrographon a large telescope (e.g. Keck/KCWI, Keck/LRIS)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "redshift",
+            "velocity dispersion"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "(lensed) quasar"
+            },
+            {
+              "controlled_vocabulary": "transient",
+              "description": "(lensed) supernova"
+            },
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxy (lens)"
+            },
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "cluster (lens)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "integral-field or slit spectrographon a large telescope (e.g. Keck/KCWI, Keck/LRIS)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "datacube",
+              "description": "datacube"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "(spacially resolved) kinematics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dispersion-measure-dm-z-relation",
+      "name": "dispersion measure (DM)-z relation",
+      "principle": "accumulated-effect probe",
+      "details": "FRBs' observed DM includes contributions from the 'local' Universe (ISM and halo), the intergalactic medium (IGM), and the host galaxy.\nBy dedispersion, the total DM can be obtained from the dynamic spectrum.\nThe 'local' Universe contribution is subtracted using a Galactic electron-density model. The host-galaxy DM contribution is separated out by jointly fitting with other parameters.\nThe resulting intergalactic-medium DM-z relation (Macquart relation) constrains $H_0$.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "accumulated effect inference"
+      ],
+      "redshift_range": {
+        "display": "0.01-1.354",
+        "components": [
+          {
+            "role": null,
+            "min": 0.01,
+            "max": 1.354
+          }
+        ],
+        "z_max": 1.354,
+        "z_max_all_components": 1.354
+      },
+      "references": [
+        {
+          "text": "James et al. 2022",
+          "url": "https://doi.org/10.1093/mnras/stac2524"
+        },
+        {
+          "text": "Xu et al. 2025",
+          "url": "https://doi.org/10.3847/1538-4357/ade5b5"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "FRB"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: radio band telescope / interferometer",
+              "description": "radio interferometric array (e.g. ASKAP, CHIME)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "dynamic spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "DM"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "FRB"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: radio band telescope / interferometer",
+              "description": "radio interferometric array (e.g. ASKAP, CHIME)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "(interferometric image)"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "(position)"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "host galaxy"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "(optical spectrograph on an 8–10 m telescope (e.g. VLT, Keck, Gemini))"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "(spectrum)"
+            }
+          ],
+          "observation_role": "auxiliary",
+          "physical_quantities": [
+            "(redshift)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gravitational-wave-gw-bright-siren",
+      "name": "gravitational wave (GW) bright siren",
+      "principle": "standard siren",
+      "details": "Distance:\nThe GW waveform's amplitude and phase jointly provide the chirp mass and luminosity distance, though distance is degenerate with the binary's inclination angle. This degeneracy can be reduced either by additional EM information (e.g. afterglow or jet imaging) or additional GW detectors with different orientations.\nVelocity:\nA detected EM counterpart allows identification of the host galaxy. Its spectroscopic redshift gives the source redshift, which is corrected for the host galaxy's peculiar velocity to obtain the recession velocity.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "~0.01",
+        "components": [
+          {
+            "role": null,
+            "value": 0.01,
+            "approximate": true
+          }
+        ],
+        "z_max": 0.01,
+        "z_max_all_components": 0.01
+      },
+      "references": [
+        {
+          "text": "Abbott et al. 2017",
+          "url": "https://doi.org/10.1038/nature24471"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "compact object merger",
+              "description": "compact object merger (with EM counterpart) (BNS, NSBH)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "GW: interferometer network",
+              "description": "km-scale laser-interferometer GW detector network (LIGO, Virgo, KAGRA)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "GW strain / phase",
+              "description": "GW strain"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "luminosity distance",
+            "orbital inclination"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "GRB, kilonova, radio afterglow"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "wide-field optical/near-IR imaging facilities with multi-wavelength follow-up"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "wide-field optical/near-IR imaging facilities with multi-wavelength follow-up"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "redshift"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "host galaxy"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph on a large telescope"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "auxiliary",
+          "physical_quantities": [
+            "redshift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gravitational-wave-gw-galaxy-catalog-dark-siren",
+      "name": "gravitational wave (GW) galaxy-catalog dark siren",
+      "principle": "standard siren",
+      "details": "Distance:\nThe GW waveform's amplitude and phase jointly provide the chirp mass and luminosity distance.\nRedshift:\nEvery galaxy from a pre-existing catalog that lies within the GW 3-D localization volume is treated as a possible host and weighted by a completeness/luminosity model.\nMarginalising over this galaxy redshift distribution and combining it with the GW luminosity-distance posterior into an $H_0$ posterior.\nCombining multiple dark sirens narrows the combined $H_0$ posterior.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "host galaxy catalogue: <0.6",
+        "components": [
+          {
+            "role": "host galaxy catalogue",
+            "bound": "<",
+            "value": 0.6
+          }
+        ],
+        "z_max": 0.6,
+        "z_max_all_components": 0.6
+      },
+      "references": [
+        {
+          "text": "Bom et al. 2024",
+          "url": "https://doi.org/10.1093/mnras/stae2390"
+        },
+        {
+          "text": "Soares-Santos et al. 2019",
+          "url": "https://doi.org/10.3847/2041-8213/ab14f1"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "compact object merger",
+              "description": "compact object merger (BNS, BBH, NSBH)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "GW: interferometer network",
+              "description": "km-scale laser-interferometer GW detector network (LIGO, Virgo, KAGRA)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "GW strain / phase",
+              "description": "GW strain"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "luminosity distance",
+            "localization"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxy (survey)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "multi-object optical spectrograph (e.g. DESI)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "redshift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gravitational-wave-gw-spectral-siren",
+      "name": "gravitational wave (GW) spectral siren",
+      "principle": "standard siren",
+      "details": "There are identifiable features in the source-frame mass spectrum of black holes (e.g. the pair-instability mass gap), which allow the redshift to be inferred by comparing the detector-frame and assumed source-frame masses.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "<0.8",
+        "components": [
+          {
+            "role": null,
+            "bound": "<",
+            "value": 0.8
+          }
+        ],
+        "z_max": 0.8,
+        "z_max_all_components": 0.8
+      },
+      "references": [],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "compact object merger",
+              "description": "compact object merger (BNS, BBH, NSBH)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "GW: interferometer network",
+              "description": "km-scale laser-interferometer GW detector network (LIGO, Virgo, KAGRA)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "GW strain / phase",
+              "description": "GW strain"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "luminosity distance",
+            "detector-frame chirp mass"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gravitational-wave-gw-tidal-siren",
+      "name": "gravitational wave (GW) tidal siren",
+      "principle": "standard siren",
+      "details": "Neutron stars experience tidal deformation during inspiral.\nTidal deformation parameters can be inferred from the GW phase evolution; combined with an assumed equation of state, this yields the source-frame mass.\nComparing the detector-frame and source-frame mass then determines the redshift.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "<4",
+        "components": [
+          {
+            "role": null,
+            "bound": "<",
+            "value": 4.0
+          }
+        ],
+        "z_max": 4.0,
+        "z_max_all_components": 4.0
+      },
+      "references": [],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "compact object merger",
+              "description": "compact object merger (BNS, NSBH)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "GW: interferometer network",
+              "description": "km-scale laser-interferometer GW detector network with kHz high-frequency sensitivity (LIGO Hanford + Livingston, Virgo, KAGRA)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "GW strain / phase",
+              "description": "GW strain"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "luminosity distance",
+            "detector-frame chirp mass"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "compact object merger",
+              "description": "compact object merger (BNS, NSBH)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "GW: interferometer network",
+              "description": "km-scale laser-interferometer GW detector network with kHz high-frequency sensitivity (LIGO Hanford + Livingston, Virgo, KAGRA)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "GW strain / phase",
+              "description": "GW phase evolution"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "tidal deformation parameters"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gamma-ray-attenuation",
+      "name": "gamma-ray attenuation",
+      "principle": "accumulated-effect probe",
+      "details": "Gamma-ray photons from blazars pair-produce with EBL photons while propagating over cosmological distances, attenuating the observed spectrum in an energy- and redshift-dependent way.\nComparing observed blazar spectra against an assumed intrinsic spectral shape yields the observed optical depth.\nThe same optical depth can also be predicted theoretically, by combining EBL density and path length to that redshift, which depends on $H_0$.\nFitting the predicted and observed optical depth constrains $H_0$.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "accumulated effect inference"
+      ],
+      "redshift_range": {
+        "display": "<3.1",
+        "components": [
+          {
+            "role": null,
+            "bound": "<",
+            "value": 3.1
+          }
+        ],
+        "z_max": 3.1,
+        "z_max_all_components": 3.1
+      },
+      "references": [
+        {
+          "text": "Domínguez et al. 2019",
+          "url": "https://doi.org/10.3847/1538-4357/ab4a0e"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "blazar"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "space-based pair-conversion GeV gamma-ray telescope (Fermi-LAT)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "optical depth"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "blazar"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "ground-based imaging atmospheric Cherenkov telescope array for TeV spectra (e.g. H.E.S.S., MAGIC, VERITAS)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "optical depth"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "blazar"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "redshift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sz-decrement-plus-x-ray",
+      "name": "SZ decrement + X ray",
+      "principle": "geometric",
+      "details": "Distance:\nThe Sunyaev-Zel'dovich effect (SZE) arises from inverse Compton scattering of CMB photons by hot ICM electrons and is characterised by the Compton parameter $y \\propto \\int n_e T_e\\, d\\ell$.\nThe X-ray bremsstrahlung surface brightness scales approximately as $S_X \\propto \\int n_e^2 \\Lambda(T_e)\\, d\\ell$.\nGiven an assumed ICM model and temperature, the different density dependences of the SZE and X-ray signals allow the line-of-sight physical scale to be constrained. Together with angular radius, $D_A(z)$ can be obtained.\nRedshift:\nSpectroscopic redshifts of cluster member galaxies are used to determine the cluster systemic redshift.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "$\\leq 0.89$",
+        "components": [
+          {
+            "role": null,
+            "bound": "<=",
+            "value": 0.89
+          }
+        ],
+        "z_max": 0.89,
+        "z_max_all_components": 0.89
+      },
+      "references": [
+        {
+          "text": "Bonamente et al. 2006",
+          "url": "https://doi.org/10.1086/505291"
+        },
+        {
+          "text": "Kozmanyan et al. 2019",
+          "url": "https://doi.org/10.1051/0004-6361/201833879"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "galaxy clusters (hot intracluster medium (ICM))"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: radio band telescope / interferometer",
+              "description": "radio interferometric array (e.g. OVRO, BIMA)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "image"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "SZ decrement"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "galaxy clusters (hot intracluster medium (ICM))"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "X-ray imaging spectrograph in space (Chandra, XMM-Newton)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "image"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "surface brightness",
+            "angular radius"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "galaxy clusters (hot intracluster medium (ICM))"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "X-ray imaging spectrograph in space (Chandra, XMM-Newton)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "temperature"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "galaxy clusters (hot intracluster medium (ICM))"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "redshift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "megamaser",
+      "name": "megamaser",
+      "principle": "geometric",
+      "details": "Water masers in the edge-on accretion disk around compact object follows Keplerian orbital motion.\nObserved velocities with long-term acceleration monitoring in a disk model yields a purely geometric angular-diameter distance to the host galaxy.\nCombined with the galaxy's recession velocity, $H_0$ can be calculated directly.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "0.011-0.034",
+        "components": [
+          {
+            "role": null,
+            "min": 0.011,
+            "max": 0.034
+          }
+        ],
+        "z_max": 0.034,
+        "z_max_all_components": 0.034
+      },
+      "references": [],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "AGN (accretion disk megamaser)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: radio band telescope / interferometer",
+              "description": "22 GHz VLBI radio array for sub-milliarcsec mapping (e.g. VLBA + GBT + Effelsberg)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "image"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "position"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "AGN (accretion disk megamaser)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: radio band telescope / interferometer",
+              "description": "single-dish radio telescope for multi-year spectral monitoring (e.g. GBT)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "line-of-sight velocity",
+            "acceleration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expanding-photosphere-method-epm",
+      "name": "expanding photosphere method (EPM)",
+      "principle": "geometric",
+      "details": "Distance:\nThe photosphere radius grows via free expansion.\nThe angular size, calculated from the observed flux and color temperature, is corrected by the dilution factor.\nAngular size and photospheric velocity inferred from the spectrum are then fitted to obtain the distance.\nRedshift:\nHost-galaxy spectroscopic redshifts of host galaxies are used, with corrections for peculiar velocities.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "<0.05",
+        "components": [
+          {
+            "role": null,
+            "bound": "<",
+            "value": 0.05
+          }
+        ],
+        "z_max": 0.05,
+        "z_max_all_components": 0.05
+      },
+      "references": [
+        {
+          "text": "Schmidt et al. 1994",
+          "url": "https://doi.org/10.1086/174546"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "type II supernovae"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "optical imaging telescope with multi-month monitoring"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "optical imaging telescope with multi-month monitoring"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "observed flux"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "type II supernovae"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "medium/low-resolution optical spectrograph on a 4–10 m telescope"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "photospheric velocity",
+            "color temperature"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cosmic-chronometers-cc",
+      "name": "cosmic chronometers (CC)",
+      "principle": "standard clock",
+      "details": "For an FLRW metric the Hubble parameter obeys $H(z) = -\\frac{1}{1+z}\\frac{dz}{dt}$.\nMeasuring the age difference $dt$ between two passive-galaxy populations separated by a small redshift interval $dz$ yields $H(z)$ directly.\nDifferential ages are derived from spectral features calibrated by stellar population synthesis (SPS) models.\nReconstructing/extrapolating $H(z)$ to $z=0$ gives $H_0$.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "differential expansion"
+      ],
+      "redshift_range": {
+        "display": "0.07-1.965",
+        "components": [
+          {
+            "role": null,
+            "min": 0.07,
+            "max": 1.965
+          }
+        ],
+        "z_max": 1.965,
+        "z_max_all_components": 1.965
+      },
+      "references": [],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxy (massive passively evolving)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical/near-IR spectrograph on a large telescope"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "redshift",
+            "differential age"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spectroastrometry-and-reverberation-mapping-sarm",
+      "name": "spectroastrometry and reverberation mapping (SARM)",
+      "principle": "geometric",
+      "details": "Distance:\nSA resolves the photocenter displacement of the BLR across velocity channels, giving its angular size.\nRM measures the light-travel-time lag between the AGN continuum and broad-line flux variations, giving the linear size of the BLR.\nJointly fitting a parameterized BLR model to the RM and SA data yields a purely geometric angular-diameter distance to the AGN.\nRedshift:\nSpectroscopic redshift of the AGN (host galaxy)",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "0.01-0.185",
+        "components": [
+          {
+            "role": null,
+            "min": 0.01,
+            "max": 0.185
+          }
+        ],
+        "z_max": 0.185,
+        "z_max_all_components": 0.185
+      },
+      "references": [
+        {
+          "text": "Wang et al. 2020",
+          "url": "https://doi.org/10.1038/s41550-019-0979-5"
+        },
+        {
+          "text": "Li et al. 2025 (Paper II)",
+          "url": "https://doi.org/10.3847/1538-4357/addf40"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "AGN (type-1 (broad-line))"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph with multi-month spectroscopic monitoring"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "optical spectrograph with multi-month spectroscopic monitoring"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "time delay"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "AGN (type-1 (broad-line))"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph with multi-month spectroscopic monitoring"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "optical spectrograph with multi-month spectroscopic monitoring"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "redshift",
+            "line-of-sight velocity"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "AGN (type-1 (broad-line))"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "near-IR long-baseline interferometer with spectro-astrometry (VLTI/GRAVITY)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectroastrometry"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "photocenter offset (angular size)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cosmic-microwave-background-cmb",
+      "name": "cosmic microwave background (CMB)",
+      "principle": "standard ruler",
+      "details": "The CMB angular power spectrum encodes the sound horizon at recombination $r_s$ as a physical ruler. The acoustic peak positions measure its angular scale $\\theta_*=r_s/D_A(z_*)$.\nWithin an assumed early-universe physics and a flat $\\Lambda$CDM parameterization, jointly fitting the full power spectrum (peak heights and angular scale) constrains $\\Omega_m h^2$, $\\Omega_b h^2$ and $\\theta_*$.\n$H_0$ is then derived as one output of this global parameter fit.",
+      "cosmic_epoch": "high redshift",
+      "cosmological_model_dependence": "strong",
+      "h0_inference_route": [
+        "global cosmological inference"
+      ],
+      "redshift_range": {
+        "display": "~1090",
+        "components": [
+          {
+            "role": null,
+            "value": 1090.0,
+            "approximate": true
+          }
+        ],
+        "z_max": 1090.0,
+        "z_max_all_components": 1090.0
+      },
+      "references": [
+        {
+          "text": "Planck Collaboration et al. 2020",
+          "url": "https://doi.org/10.1051/0004-6361/201833910"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "CMB",
+              "description": "CMB"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "space-based multi-frequency microwave survey telescope (Planck)\nground-based high-resolution CMB telescopes for small-scale power spectra (ACT, SPT)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "power spectrum",
+              "description": "angular power spectra"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "acoustic angular scale",
+            "peak heights"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baryon-acoustic-oscillations-bao-plus-big-bang-nucleosynthesis-bbn",
+      "name": "baryon acoustic oscillations (BAO) + Big Bang Nucleosynthesis (BBN)",
+      "principle": "standard ruler",
+      "details": "Distance:\nThe BAO feature originates from acoustic waves in the pre-recombination photon-baryon plasma and provides a standard ruler given by the sound horizon at the drag epoch $r_d$.\nLarge spectroscopic surveys measure galaxy clustering through the correlation function or power spectrum, which constrain transverse ($D_M(z)​/r_d$) and radial ($D_H(z)/r_d$) distance ratios.\nBBN measurements of primordial D/H abundance constrain baryon density, which calibrates $r_d$.\nThese measurements together yield $D_M(z)$ and $H(z)$.\nRedshift:\nSpectroscopic redshifts of large-scale structure tracers are used.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "medium",
+      "h0_inference_route": [
+        "differential expansion",
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "targets: 0.1-4.2\nstandard ruler: ~1060",
+        "components": [
+          {
+            "role": "targets",
+            "min": 0.1,
+            "max": 4.2
+          },
+          {
+            "role": "standard ruler",
+            "value": 1060.0,
+            "approximate": true
+          }
+        ],
+        "z_max": 4.2,
+        "z_max_all_components": 1060.0
+      },
+      "references": [
+        {
+          "text": "DESI Collaboration et al. 2025",
+          "url": "https://doi.org/10.1103/tr6y-kpc6"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxies"
+            },
+            {
+              "controlled_vocabulary": "AGN",
+              "description": "quasars"
+            },
+            {
+              "controlled_vocabulary": "absorption system",
+              "description": "Lyman-alpha forest"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "wide-field optical spectroscopic survey facilities (e.g. Sloan/BOSS, Mayall/DESI)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "power spectrum",
+              "description": "power spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "$D_M(z)​/r_d$",
+            "$D_H(z)/r_d$"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "absorption system",
+              "description": "metal-poor quasar absorption system"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "high-resolution optical spectrograph on an 8–10 m telescope (e.g. Keck/HIRES, VLT/UVES)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "absorption spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "primordial D/H abundance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "equality-scale-from-cmb-lensing",
+      "name": "equality scale from CMB lensing",
+      "principle": "standard ruler",
+      "details": "The matter power spectrum features a turnover at $k_eq$ (the matter-radiation equality scale).\nThis turnover is imprinted on the lensing power spectrum in the form of $k_{\\rm eq}\\chi_* \\propto \\Omega_m^{0.6}\\,h$, since the CMB lensing power spectrum is primarily determined by the line-of-sight projection integral of the matter power spectrum.\nUsing a prior on $A_s$ and an external measurement of $\\Omega_m$, $H_0$ can be constrained.",
+      "cosmic_epoch": "high redshift",
+      "cosmological_model_dependence": "strong",
+      "h0_inference_route": [
+        "global cosmological inference"
+      ],
+      "redshift_range": {
+        "display": "targets: ~1090\nstandard ruler: ~3400",
+        "components": [
+          {
+            "role": "targets",
+            "value": 1090.0,
+            "approximate": true
+          },
+          {
+            "role": "standard ruler",
+            "value": 3400.0,
+            "approximate": true
+          }
+        ],
+        "z_max": 1090.0,
+        "z_max_all_components": 3400.0
+      },
+      "references": [
+        {
+          "text": "Baxter & Sherwin 2021",
+          "url": "https://doi.org/10.1093/mnras/staa3706"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "CMB",
+              "description": "CMB"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "high-resolution CMB survey telescope (Planck; ACT, SPT; Simons Observatory)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "power spectrum",
+              "description": "lensing power spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "matter-radiation equality scale"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parallax",
+      "name": "parallax",
+      "principle": "geometric",
+      "details": "Distance:\nEarth's orbit around the Sun produces an apparent angular displacement of nearby stars relative to distance background stars.\nMeasuring the parallax angle over multiple epochs allows the geometric distance to be determined using the 1 AU baseline.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder geometric anchor"
+      ],
+      "redshift_range": {
+        "display": "$\\approx 0$",
+        "components": [
+          {
+            "role": null,
+            "value": 0.0
+          }
+        ],
+        "z_max": 0.0,
+        "z_max_all_components": 0.0
+      },
+      "references": [],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "first-rung distance indicators in the Milky Way"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "high-precision, multi-epoch astrometric imaging (e.g. Gaia, HST spatial scanning)"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "high-precision, multi-epoch astrometric imaging (e.g. Gaia, HST spatial scanning)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "image"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "parallax angle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "detached-eclipsing-binary-deb",
+      "name": "detached eclipsing binary (DEB)",
+      "principle": "geometric",
+      "details": "Distance:\nSpectroscopy measures the radial velocity semi-amplitudes. Combined with theorbital period and inclination angle constrained by the light curve, the orbital semi-major axis $a$ can be determined. Togther with the relative radii $R_1/a$ and $R_2/a$ from light-curve modelling, the physical radii are obtained.\nPhotometry provides colour information, from which surface brightness is inferred using the surface brightness-colour relation. This yields the angular diameters.\nCombining the physical and angular sizes gives the geometric distance.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder geometric anchor"
+      ],
+      "redshift_range": {
+        "display": "$\\approx 0$",
+        "components": [
+          {
+            "role": null,
+            "value": 0.0
+          }
+        ],
+        "z_max": 0.0,
+        "z_max_all_components": 0.0
+      },
+      "references": [],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "detached eclipsing binaries in LMC"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "optical/near-IR photometry"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "optical/near-IR photometry"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "orbital inclination",
+            "relative radii",
+            "period"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "detached eclipsing binaries in LMC"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "optical/near-IR photometry"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "optical/near-IR photometry"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "photometry"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "flux",
+            "colours"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "detached eclipsing binaries in LMC"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "high-resolution spectrograph"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "radial velocity semi-amplitudes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cepheids",
+      "name": "Cepheids",
+      "principle": "standard candle",
+      "details": "Distance:\nThe pulsation period of a Cepheid correlates with stellar radius and mass, which, together with the narrow temperature range of Cepheids, produces a tight relation between period and luminosity.\nMeasuring the pulsation period and extinction-corrected apparent magnitude allows the intrinsic luminosity and distance to be determined.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder first rung"
+      ],
+      "redshift_range": {
+        "display": "<0.01",
+        "components": [
+          {
+            "role": null,
+            "bound": "<",
+            "value": 0.01
+          }
+        ],
+        "z_max": 0.01,
+        "z_max_all_components": 0.01
+      },
+      "references": [
+        {
+          "text": "Riess et al. 2022",
+          "url": "https://doi.org/10.3847/2041-8213/ac5c5b"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "Cepheid (type I)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "high-resolution, multi-epoch optical–near-IR imaging photometry (e.g. HST, JWST)"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "high-resolution, multi-epoch optical–near-IR imaging photometry (e.g. HST, JWST)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "pulsation period"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "Cepheid (type I)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "high-resolution, multi-epoch optical–near-IR imaging photometry (e.g. HST, JWST)"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "high-resolution, multi-epoch optical–near-IR imaging photometry (e.g. HST, JWST)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "photometry"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "magnitude",
+            "colour"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tip-of-the-red-giant-branch-trgb",
+      "name": "tip of the red giant branch (TRGB)",
+      "principle": "standard candle",
+      "details": "Distance:\nLow-mass red giant stars (RGB) reach TRGB at a nearly fixed helium-core mass before the helium flash, producing a sharp cutoff in the RGB luminosity function.\nPhotometry is used to construct a color–magnitude diagram, and the TRGB magnitude is determined from the luminosity-function discontinuity using edge detection or luminosity-function fitting, with corrections for extinction and color/metallicity dependence.\nComparing the observed TRGB magnitude with its geometrically calibrated absolute magnitude yields the distance modulus and hence the distance.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder first rung"
+      ],
+      "redshift_range": {
+        "display": "<0.01",
+        "components": [
+          {
+            "role": null,
+            "bound": "<",
+            "value": 0.01
+          }
+        ],
+        "z_max": 0.01,
+        "z_max_all_components": 0.01
+      },
+      "references": [
+        {
+          "text": "Freedman et al. 2019",
+          "url": "https://doi.org/10.3847/1538-4357/ab2f73"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "TRGB"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "high-resolution, deep imaging photometry of uncrowded halo fields (e.g. HST, JWST)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "photometry"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "magnitude",
+            "colour"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "j-region-asymptotic-giant-branch-jagb",
+      "name": "J-region asymptotic giant branch (JAGB)",
+      "principle": "standard candle",
+      "details": "Distance:\nCarbon-rich thermally-pulsing AGB stars occupy a distinct region of near-infrared color–magnitude diagrams and have a relatively narrow luminosity function in the J band.\nNear-infrared photometry is used to color-select JAGB stars and determine a characteristic apparent magnitude from their luminosity function using the mode or other statistics.\nComparing this apparent magnitude with a geometrically calibrated JAGB absolute magnitude yields the distance modulus and hence the distance.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder first rung"
+      ],
+      "redshift_range": {
+        "display": "<0.01",
+        "components": [
+          {
+            "role": null,
+            "bound": "<",
+            "value": 0.01
+          }
+        ],
+        "z_max": 0.01,
+        "z_max_all_components": 0.01
+      },
+      "references": [
+        {
+          "text": "Freedman et al. 2025",
+          "url": "https://doi.org/10.3847/1538-4357/adce78"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "JAGB"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "near-IR imaging photometry (e.g. JWST/NIRCam; ground-based near-IR imagers)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "photometry"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "magnitude",
+            "color"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mira-variables",
+      "name": "Mira variables",
+      "principle": "standard candle",
+      "details": "Distance:\nMira variables are fundamental-mode pulsating asymptotic giant branch (AGB) stars that follow a period–luminosity relation (PLR). Shorter-period ($P<400$ days), oxygen-rich Miras exhibit a particularly tight near-infrared PLR.\nThis population is selected using period, amplitude, and crowding criteria to minimize systematic effects.\nMulti-epoch near-infrared photometry provides the pulsation period and intensity-averaged mean magnitude, which, combined with the calibrated PLR, yields the distance.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder first rung"
+      ],
+      "redshift_range": {
+        "display": "<0.003",
+        "components": [
+          {
+            "role": null,
+            "bound": "<",
+            "value": 0.003
+          }
+        ],
+        "z_max": 0.003,
+        "z_max_all_components": 0.003
+      },
+      "references": [
+        {
+          "text": "Huang et al. 2024",
+          "url": "https://doi.org/10.3847/1538-4357/ad1ff8"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "Mira variables"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "near-IR, multi-epoch (year-scale) imaging photometry (e.g. HST, JWST)"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "near-IR, multi-epoch (year-scale) imaging photometry (e.g. HST, JWST)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "pulsation period"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "Mira variables"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "near-IR, multi-epoch (year-scale) imaging photometry (e.g. HST, JWST)"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "near-IR, multi-epoch (year-scale) imaging photometry (e.g. HST, JWST)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "photometry"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "magnitude"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flux-weighted-gravity-luminosity-relation-fglr",
+      "name": "flux-weighted gravity-luminosity relation (FGLR)",
+      "principle": "standard candle",
+      "details": "Distance:\nBlue supergiant stars cross the HR diagram at nearly constant luminosity and mass, producing a tight relation between bolometric luminosity and the 'flux-weighted gravity' $g_F=g/T_{\\rm eff,4}^4$.\nSpectroscopically determining a blue supergiant's effective temperature, gravity, and metallicity gives its luminosity via the FGLR.\nCombining with extinction-corrected multi-band photometry yields the distance.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder first rung"
+      ],
+      "redshift_range": {
+        "display": "<0.002",
+        "components": [
+          {
+            "role": null,
+            "bound": "<",
+            "value": 0.002
+          }
+        ],
+        "z_max": 0.002,
+        "z_max_all_components": 0.002
+      },
+      "references": [
+        {
+          "text": "Bresolin et al. 2025",
+          "url": "https://doi.org/10.3847/1538-4357/adfc4c"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "blue supergiant stars (B/A-type)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "low/medium-resolution optical spectrograph on an 8–10 m telescope  (e.g. Keck/LRIS, VLT/FORS)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "effective temperature",
+            "gravity",
+            "metallicity"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "star",
+              "description": "blue supergiant stars (B/A-type)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "multi-band imaging photometry"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "photometry"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "magnitude"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type-ia-supernovae-sne-ia",
+      "name": "Type Ia Supernovae (SNe Ia)",
+      "principle": "standard candle",
+      "details": "Distance:\nBrighter SNe Ia have broader light curves and decline more slowly after peak brightness.\nSNe Ia light curves are fitted to obtain peak magnitude, light-curve stretch, and color parameters. These parameters are used to standardize SN Ia luminosities through light-curve shape and color corrections, together with host-galaxy and selection-bias corrections.\nThe standardized magnitudes are then converted into luminosity distances using the calibrated SN Ia absolute magnitude.  \nVelocity:\nHost-galaxy spectroscopic redshifts of Hubble-flow SNe Ia are used, with corrections for peculiar velocities.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder second rung"
+      ],
+      "redshift_range": {
+        "display": "0.01-0.15",
+        "components": [
+          {
+            "role": null,
+            "min": 0.01,
+            "max": 0.15
+          }
+        ],
+        "z_max": 0.15,
+        "z_max_all_components": 0.15
+      },
+      "references": [
+        {
+          "text": "Riess et al. 2022",
+          "url": "https://doi.org/10.3847/2041-8213/ac5c5b"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "Type Ia supernovae"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "wide-field optical/NIR time-domain imaging with days-scale cadence over several months (e.g. HST/WFC3)"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "wide-field optical/NIR time-domain imaging with days-scale cadence over several months (e.g. HST/WFC3)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "magnitude",
+            "decline rate (stretch)",
+            "color"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "host galaxy"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "auxiliary",
+          "physical_quantities": [
+            "redshift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "type-ii-supernovae-sne-ii",
+      "name": "Type II Supernovae (SNe II)",
+      "principle": "standard candle",
+      "details": "Distance:\nIntrinsically brighter SNe II have higher expanding photophere velocity.\nMulti-band photometry of SNe II provides the apparent magnitude and colour, while optical spectroscopy measures the expansion velocity from absorption features. These quantities are used to correct the SNe II luminosity.\nThe corrected luminosities are then converted into luminosity distances using the calibrated SN II absolute magnitude.\nVelocity:\nHost-galaxy spectroscopic redshifts of Hubble-flow SNe II are used, with corrections for peculiar velocities.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder second rung"
+      ],
+      "redshift_range": {
+        "display": "0.01-0.35",
+        "components": [
+          {
+            "role": null,
+            "min": 0.01,
+            "max": 0.35
+          }
+        ],
+        "z_max": 0.35,
+        "z_max_all_components": 0.35
+      },
+      "references": [
+        {
+          "text": "de Jaeger et al. 2022",
+          "url": "https://doi.org/10.1093/mnras/stac1661"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "Type II supernovae"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "wide-field optical/NIR time-domain imaging with days-to-weeks cadence over several months"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "wide-field optical/NIR time-domain imaging with days-to-weeks cadence over several months"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "magnitude"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "Type II supernovae"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "photospheric velocity",
+            "color"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "host galaxy"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "auxiliary",
+          "physical_quantities": [
+            "redshift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "surface-brightness-fluctuations-sbf",
+      "name": "surface brightness fluctuations (SBF)",
+      "principle": "standard candle",
+      "details": "Distance:\nThe further a galaxy is, the more stars are averaged within each resolution element, making its surface brightness smoother.\nThe fluctuation variance is measured from the Fourier power spectrum and normalized by the mean galaxy flux to obtain the fluctuation flux, which is converted into the apparent SBF magnitude.\nThe absolute SBF magnitude is corrected for stellar-population dependence using the galaxy color and calibrated with first-rung distance indicators; together with the apparent magnitude, it yields the distance.\nVelocity:\nGroup-averaged CMB-frame recession velocities derived from spectroscopic redshifts are used.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder second rung"
+      ],
+      "redshift_range": {
+        "display": "0.005-0.025",
+        "components": [
+          {
+            "role": null,
+            "min": 0.005,
+            "max": 0.025
+          }
+        ],
+        "z_max": 0.025,
+        "z_max_all_components": 0.025
+      },
+      "references": [
+        {
+          "text": "Blakeslee et al. 2021",
+          "url": "https://doi.org/10.3847/1538-4357/abe86a"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxies (early-type / bulges of spiral galaxies (old stellar population))"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "high-resolution imaging photometry (e.g. HST, JWST)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "image"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "fluctuation",
+            "color"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxies (early-type / bulges of spiral galaxies (old stellar population))"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "redshift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tully-fisher-relation-tf",
+      "name": "Tully-Fisher relation (TF)",
+      "principle": "standard candle",
+      "details": "Distance:\nThe luminosity of a rotation-supported spiral galaxy correlates with its rotation velocity, which is inferred from the inclination-corrected H I linewidth.\nThe relation's slope is constrained by galaxy clusters and its zero point is calibrated using the previous rung.\nComparing the corrected apparent magnitude with the inferred absolute magnitude yields the distance.\nVelocity:\nCMB-frame recession velocities derived from spectroscopic redshifts are used, with peculiar velocities reduced by group/cluster averaging or flow modelling.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder second rung"
+      ],
+      "redshift_range": {
+        "display": "0.01-0.05",
+        "components": [
+          {
+            "role": null,
+            "min": 0.01,
+            "max": 0.05
+          }
+        ],
+        "z_max": 0.05,
+        "z_max_all_components": 0.05
+      },
+      "references": [
+        {
+          "text": "Kourkchi et al. 2020",
+          "url": "https://doi.org/10.3847/1538-4357/ab901c"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxies (spiral (rotation-supported disks))"
+            },
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "cluster"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: radio band telescope / interferometer",
+              "description": "single-dish radio telescope or interferometer (e.g. Arecibo/ALFA)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "rotation velocity",
+            "redshift"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxies (spiral (rotation-supported disks))"
+            },
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "cluster"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "optical/near-IR imaging photometry (e.g. SDSS, WISE)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "photometry"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "magnitude",
+            "disk inclination"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fundamental-plane-fp",
+      "name": "fundamental plane (FP)",
+      "principle": "standard ruler",
+      "details": "Distance:\nEarly-type galaxies follow an empirical Fundamental Plane relating their physical effective radius, mean surface brightness, and stellar velocity dispersion. Imaging provides the angular effective radius and mean surface brightness, while spectroscopy provides the stellar velocity dispersion.\nAfter calibrating the FP relation using the previous rung, the physical effective radius can be calculated.\nComparing the physical and angular effective radius yields the angular-diameter distance.\nVelocity:\nCMB-frame recession velocities derived from spectroscopic redshifts are used.",
+      "cosmic_epoch": "local universe",
+      "cosmological_model_dependence": "no",
+      "h0_inference_route": [
+        "distance ladder second rung"
+      ],
+      "redshift_range": {
+        "display": "0.01-0.1",
+        "components": [
+          {
+            "role": null,
+            "min": 0.01,
+            "max": 0.1
+          }
+        ],
+        "z_max": 0.1,
+        "z_max_all_components": 0.1
+      },
+      "references": [
+        {
+          "text": "Said et al. 2025",
+          "url": "https://doi.org/10.1093/mnras/staf700"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxies (early-type)"
+            },
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "cluster"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "wide-field optical/near-IR imaging photometry"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "image"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "radius",
+            "mean surface magnitude"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "galaxies (early-type)"
+            },
+            {
+              "controlled_vocabulary": "cluster",
+              "description": "cluster"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "velocity dispersion",
+            "redshift"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hii-l-sigma-relation",
+      "name": "HII L-σ relation",
+      "principle": "standard candle",
+      "details": "Distance:\nThe HII galaxies and giant HII regions are empirically found to follow a common relation between H$\\beta$ luminosity and the velocity dispersion of the ionised gas.\nThe relation's zero point is calibrated using giant HII regions in nearby galaxies with independently measured distances.\nThe measured velocity dispersion predicts the intrinsic H$\\beta$ luminosity, which, when compared with the spectrophotometrically measured H$\\beta$ flux, yields the luminosity distance.\nVelocity:\nSpectroscopic redshifts of Hubble-flow H II galaxies.",
+      "cosmic_epoch": "high redshift",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "0.01-7.5",
+        "components": [
+          {
+            "role": null,
+            "min": 0.01,
+            "max": 7.5
+          }
+        ],
+        "z_max": 7.5,
+        "z_max_all_components": 7.5
+      },
+      "references": [
+        {
+          "text": "Fernández-Arenas et al. 2018",
+          "url": "https://doi.org/10.1093/mnras/stx2710"
+        },
+        {
+          "text": "Chávez et al. 2025",
+          "url": "https://doi.org/10.1093/mnras/staf386"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "HII galaxies and giant HII regions"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "high-dispersion optical spectrograph on a large telescope"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "velocity dispersion",
+            "redshift"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "HII galaxies and giant HII regions"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "wide-aperture low-dispersion optical spectrograph for spectrophotometry (e.g. OAN-SPM 2.1 m/Boller & Chivens spectrograph)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "image / photometry",
+              "description": "spectrophotometry"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "flux"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gamma-ray-bursts-grb",
+      "name": "gamma-ray bursts (GRB)",
+      "principle": "standard candle",
+      "details": "Must be calibrated against a low-redshift probe (commonly SNe Ia distance moduli via Gaussian-process interpolation, or cosmic chronometers H(z)).\nDistance:\n$L_{\\rm peak}$ is obtained from the gamma-ray (prompt emission) light curve, $L_a$ and $T_a^*$ are obtained from the X-ray (afterglow) light curve.\nThe 3D Dainotti fundamental plane combines three observables into a single correlation, used to standardize the GRB's intrinsic luminosity so it can serve as a distance indicator.\nRedshift:\nSpectroscopic redshift is used.",
+      "cosmic_epoch": "intermediate redshift",
+      "cosmological_model_dependence": "weak",
+      "h0_inference_route": [
+        "integrated distance"
+      ],
+      "redshift_range": {
+        "display": "<5",
+        "components": [
+          {
+            "role": null,
+            "bound": "<",
+            "value": 5.0
+          }
+        ],
+        "z_max": 5.0,
+        "z_max_all_components": 5.0
+      },
+      "references": [
+        {
+          "text": "Dainotti et al. 2023",
+          "url": "https://doi.org/10.1093/mnras/stac2752"
+        }
+      ],
+      "observations": [
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "GRB (long)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "space-based gamma-ray monitors (e.g. Swift/BAT, Fermi/GBM)"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "space-based gamma-ray monitors (e.g. Swift/BAT, Fermi/GBM)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "peak prompt luminosity $L_{\\rm peak}$"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "GRB (long)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: other band telescope / interferometer",
+              "description": "X-ray imaging spectrograph in space (Chandra, XMM-Newton)"
+            },
+            {
+              "controlled_vocabulary": "time-domain telescope",
+              "description": "X-ray imaging spectrograph in space (Chandra, XMM-Newton)"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "light curve",
+              "description": "light curve"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "plateau luminosity $L_a$",
+            "rest-frame plateau end time $T_a^*$"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "transient",
+              "description": "GRB (long)"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "primary",
+          "physical_quantities": [
+            "redshift"
+          ]
+        }
+      ]
+    }
+  ]
+}

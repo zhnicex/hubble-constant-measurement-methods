@@ -1,0 +1,406 @@
+{
+  "schema_version": "2.1.0",
+  "fields": {
+    "method": {
+      "label": "Method",
+      "definition": "name of the measurement method or distance indicator",
+      "source_column": "A",
+      "scope": "method",
+      "type": "string",
+      "controlled_vocabulary": false
+    },
+    "principle": {
+      "label": "Principle",
+      "definition": "the fundamental physical basis that provides the cosmological information relevant to the determination of $H_0$",
+      "source_column": "B",
+      "scope": "method",
+      "type": "controlled_vocabulary",
+      "controlled_vocabulary": true
+    },
+    "target": {
+      "label": "Target",
+      "definition": "astronomical object that is observed",
+      "source_column": "C",
+      "scope": "observation",
+      "type": "controlled_vocabulary_with_description",
+      "controlled_vocabulary": true
+    },
+    "facility": {
+      "label": "Facility",
+      "definition": "type of observational facility required",
+      "source_column": "D",
+      "scope": "observation",
+      "type": "controlled_vocabulary_with_description",
+      "controlled_vocabulary": true
+    },
+    "data_product": {
+      "label": "Data Product",
+      "definition": "observational representation from which the relevant physical quantities are extracted",
+      "source_column": "E",
+      "scope": "observation",
+      "type": "controlled_vocabulary_with_description",
+      "controlled_vocabulary": true
+    },
+    "physical_quantities": {
+      "label": "Physical Quantity",
+      "definition": "physical quantity inferred or measured from the observational data",
+      "source_column": "F",
+      "scope": "observation",
+      "type": "array[string]",
+      "controlled_vocabulary": false
+    },
+    "details": {
+      "label": "Detail",
+      "definition": null,
+      "source_column": "G",
+      "scope": "method",
+      "type": "string",
+      "controlled_vocabulary": false
+    },
+    "h0_inference_route": {
+      "label": "$H_0$ Inference Route",
+      "definition": "how the measured information contributes to the inference of $H_0$",
+      "source_column": "H",
+      "scope": "method",
+      "type": "array[controlled_vocabulary]",
+      "controlled_vocabulary": true
+    },
+    "redshift_range": {
+      "label": "Redshift Range",
+      "definition": "redshift range directly used in published measurements or inferences of $H_0$",
+      "source_column": "I",
+      "scope": "method",
+      "type": "structured_redshift",
+      "controlled_vocabulary": false
+    },
+    "cosmic_epoch": {
+      "label": "Cosmic Epoch",
+      "definition": "the cosmic epoch reached by observations used in an $H_0$ measurement or inference, classified according to the maximum redshift used",
+      "source_column": "J",
+      "scope": "method",
+      "type": "controlled_vocabulary",
+      "controlled_vocabulary": true
+    },
+    "cosmological_model_dependence": {
+      "label": "Cosmological Model Dependence",
+      "definition": "degree to which the inference relies on assumptions about cosmological physics or expansion history",
+      "source_column": "K",
+      "scope": "method",
+      "type": "controlled_vocabulary",
+      "controlled_vocabulary": true
+    },
+    "references": {
+      "label": "Reference",
+      "definition": null,
+      "source_column": "L",
+      "scope": "method",
+      "type": "array[reference]",
+      "controlled_vocabulary": false
+    },
+    "observation_role": {
+      "label": "Observation Role",
+      "definition": "whether an observation defines the principal target or supports it",
+      "scope": "observation",
+      "type": "controlled_vocabulary",
+      "controlled_vocabulary": true
+    }
+  },
+  "controlled_vocabularies": {
+    "principle": {
+      "assignment": "exact_text",
+      "entries": [
+        {
+          "value": "geometric",
+          "definition": "absolute distance is derived from the geometry/dynamics of an individual system"
+        },
+        {
+          "value": "standard ruler",
+          "definition": "a physical length scale is known, standardised or calibrated rather than being determined from the individual system"
+        },
+        {
+          "value": "standard candle",
+          "definition": "the intrinsic luminosity is known, standardised or calibrated"
+        },
+        {
+          "value": "standard siren",
+          "definition": "absolute luminosity distance is inferred from the gravitational-wave signal"
+        },
+        {
+          "value": "standard clock",
+          "definition": "an absolute age or a standardisable differential age interval is inferred from astrophysical evolution"
+        },
+        {
+          "value": "accumulated-effect probe",
+          "definition": "cosmological path-length or expansion information is encoded in a propagation effect accumulated along the line of sight"
+        }
+      ]
+    },
+    "target": {
+      "assignment": "style_legend",
+      "entries": [
+        {
+          "value": "star",
+          "definition": null,
+          "style": {
+            "font_color": "#FF0000",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "galaxy",
+          "definition": null,
+          "style": {
+            "font_color": "#FFC000",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "AGN",
+          "definition": null,
+          "style": {
+            "font_color": "#92D050",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "transient",
+          "definition": null,
+          "style": {
+            "font_color": "#00B050",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "compact object merger",
+          "definition": null,
+          "style": {
+            "font_color": "#00B0F0",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "CMB",
+          "definition": null,
+          "style": {
+            "font_color": "#0070C0",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "absorption system",
+          "definition": null,
+          "style": {
+            "font_color": "#002060",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "cluster",
+          "definition": null,
+          "style": {
+            "font_color": "#7030A0",
+            "fill_color": null
+          }
+        }
+      ],
+      "style_channels": [
+        "font_color"
+      ]
+    },
+    "facility": {
+      "assignment": "style_legend",
+      "entries": [
+        {
+          "value": "GW: interferometer network",
+          "definition": null,
+          "style": {
+            "font_color": "#FF0000",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "EM: radio band telescope / interferometer",
+          "definition": null,
+          "style": {
+            "font_color": "#FFC000",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "EM: other band telescope / interferometer",
+          "definition": null,
+          "style": {
+            "font_color": "#92D050",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "EM: spectroscopic telescope",
+          "definition": null,
+          "style": {
+            "font_color": "#00B050",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "time-domain telescope",
+          "definition": null,
+          "style": {
+            "font_color": null,
+            "fill_color": "#FFFF00"
+          }
+        }
+      ],
+      "style_channels": [
+        "font_color",
+        "fill_color"
+      ]
+    },
+    "data_product": {
+      "assignment": "style_legend",
+      "entries": [
+        {
+          "value": "image / photometry",
+          "definition": null,
+          "style": {
+            "font_color": "#FF0000",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "datacube",
+          "definition": null,
+          "style": {
+            "font_color": "#FFC000",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "light curve",
+          "definition": null,
+          "style": {
+            "font_color": "#92D050",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "spectrum",
+          "definition": null,
+          "style": {
+            "font_color": "#00B050",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "power spectrum",
+          "definition": null,
+          "style": {
+            "font_color": "#00B0F0",
+            "fill_color": null
+          }
+        },
+        {
+          "value": "GW strain / phase",
+          "definition": null,
+          "style": {
+            "font_color": "#0070C0",
+            "fill_color": null
+          }
+        }
+      ],
+      "style_channels": [
+        "font_color"
+      ]
+    },
+    "h0_inference_route": {
+      "assignment": "exact_text",
+      "entries": [
+        {
+          "value": "integrated distance",
+          "definition": "constrains a cosmological distance, which encodes the expansion history through an integral, and $H_0$ is obtained using the distance-redshift relation"
+        },
+        {
+          "value": "differential expansion",
+          "definition": "constrains the expansion rate $H(z)$ directly, $H_0$ is inferred by extrapolating or fitting the expansion history to $z=0$"
+        },
+        {
+          "value": "accumulated effect inference",
+          "definition": "a physical effect is accumulated along the line of sight whose redshift dependence encodes cosmological path-length or expansion information, from which $H_0$ is inferred"
+        },
+        {
+          "value": "global cosmological inference",
+          "definition": "the observed data are compared with predictions from a full cosmological model, where $H_0$ is obtained simultaneously with other cosmological parameters through a global model fit"
+        },
+        {
+          "value": "distance ladder geometric anchor",
+          "definition": "a system whose distance is determined geometrically and is used to calibrate the absolute scale of the first-rung indicator"
+        },
+        {
+          "value": "distance ladder first rung",
+          "definition": "a nearby indicator calibrated by geometric anchors, which is used to measure distances to more distant galaxies hosting second-rung indicators and thereby calibrate the second rung"
+        },
+        {
+          "value": "distance ladder second rung",
+          "definition": "a more distant-reaching indicator calibrated by the first rung, which extends into the Hubble flow and is used to infer $H_0$ through the D-z relation"
+        }
+      ]
+    },
+    "cosmic_epoch": {
+      "assignment": "exact_text",
+      "entries": [
+        {
+          "value": "local universe",
+          "definition": "$z_{max}<0.15$"
+        },
+        {
+          "value": "intermediate redshift",
+          "definition": "$0.15<z_{max}<6$"
+        },
+        {
+          "value": "high redshift",
+          "definition": "$z_{max}>6$"
+        }
+      ]
+    },
+    "cosmological_model_dependence": {
+      "assignment": "exact_text",
+      "entries": [
+        {
+          "value": "no",
+          "definition": "no specific dynamical cosmological model is required; relies only on FLRW kinematics / local cosmography"
+        },
+        {
+          "value": "weak",
+          "definition": "requires assumptions about the late-time expansion history and/or externally constrained cosmological parameters ($\\Omega_b$)"
+        },
+        {
+          "value": "medium",
+          "definition": "uses a physical scale from pre-recombination physics"
+        },
+        {
+          "value": "strong",
+          "definition": "directly fits observables generated by early-universe physics using a detailed cosmological model"
+        }
+      ]
+    },
+    "observation_role": {
+      "assignment": "derived",
+      "entries": [
+        {
+          "value": "primary",
+          "definition": "defines the method's principal astronomical target and is used for method discovery/filtering"
+        },
+        {
+          "value": "auxiliary",
+          "definition": "supporting observation, such as host-galaxy redshift measurement, which is retained in the full observation chain but is not used as a primary target filter"
+        }
+      ]
+    }
+  },
+  "notes": {
+    "distance_ladder": {
+      "label": "distance ladder",
+      "definition": "In the distance ladder, each rung is calibrated using overlapping objects with the previous rung, allowing the absolute distance scale to be propagated to increasingly distant galaxies. Once a distance indicator is calibrated, it is applied to more distant galaxies to obtain luminosity distances and host-galaxy redshifts. The resulting distance–redshift relation, usually represented by a Hubble diagram, is then used to determine the Hubble constant $H_0$."
+    }
+  }
+}

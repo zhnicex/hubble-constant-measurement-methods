@@ -6,21 +6,21 @@ This difference not only prompts us to make more precise measurements but also t
 
 At the same time, organising these methods based on their observation and inference chain provides an intuitive way to understand how an $H_0$ value is measured. In addition to enabling systematic comparison among existing measurement approaches, this framework offers a practical reference for future observational studies.
 
-The aim of this project is to construct a structured, common framework for the comparison of current methods for determining $H_0$. Rather than focusing on their final reported values of $H_0$, the framework characterises the observational-to-inference chain underlying each method. This is done by describing each method from physical principle, observation targets, facilities, required data products and physical quantities aspects. Additional fields such as redshift coverage, $H_0$ inference route and cosmological dependence summarise certain features of the methods. This should help identify measurement methods or observational directions with potential for future development, as well as bottlenecks that deserve focused improvement.
+This project aims to construct a structured, common framework for the comparison of current methods for determining $H_0$. Rather than focusing on their final reported values of $H_0$, the framework characterises the observational-to-inference chain underlying each method. This is done by describing each method from physical principles, observation targets, facilities, required data products and physical quantities aspects. Additional fields such as redshift coverage, $H_0$ inference route and cosmological dependence summarise certain features of the methods. This should help identify measurement methods or observational directions with potential for future development, as well as bottlenecks that deserve focused improvement.
 
 ## 2. Database Construction
 
 ### 2.1 Overview
 
-The database is constructed at the level of measurement methods rather than individual analyses. Specific papers using the same method may differ in sample selection, statistical treatment or detailed modelling. Recording every paper-specific choices will make systematic comparison between methods infeasible. This database therefore presents the characteristic measurement and intrinsic need of each meathod, hence representative papers were selected and analysed for each method.
+The database is constructed at the level of measurement methods rather than individual analyses. Specific papers using the same method may differ in sample selection, statistical treatment or detailed modelling. Recording every paper-specific choice will make systematic comparison between methods infeasible. This database therefore presents the characteristic measurement and intrinsic need of each method; hence, representative papers were selected and analysed for each method.
 
 The distance ladder is not treated as a single measurement method, because it does not correspond to a fixed observational procedure. Instead, it is an inference chain in which the indicators used at individual rungs can be replaced by alternative ones. In the distance ladder, each rung is calibrated using overlapping objects with the previous rung, allowing the absolute distance scale to be propagated to increasingly distant galaxies. Once a distance indicator is calibrated, it is applied to more distant galaxies to obtain luminosity distances and host-galaxy redshifts. The resulting distance-redshift relation, usually represented by a Hubble diagram, is then used to determine the Hubble constant $H_0$. 2 geometric anchors used in the distance ladder, 5 first-rung indicators and 5 second-rung indicators are listed individually in the database. This allows their different physical principles and observational ranges to be compared directly.
 
-One of the main difficulties in constructing the database is that different methods uses different quantities and different papers use different terminologies. In order to review the measurement chain under a consistent framework, it is decomposed into several layers: principle, target, facility, data product, physical quantity and $H_0$ inference route. Several other fields: redshift range, cosmic epoch and cosmological model dependency\ describe the intrinsic features of each method. To ensure the same level of abstraction across methods, controlled vocabulary is used in the fields: principle, target, facility, data product, $H_0$ inference route, cosmic epoch and cosmological model dependence. The controlled vocabularies enable visualisation and direct method comparison. However, this categorisation will lose certain level of detail and the classification scheme always contains judgments.
+One of the main difficulties in constructing the database is that different methods use different quantities and different papers use different terminologies. In order to review the measurement chain under a consistent framework, it is decomposed into several layers: principle, target, facility, data product, physical quantity, and $H_0$ inference route. Several other fields: redshift range, cosmic epoch and cosmological model dependence describe the intrinsic features of each method. To ensure the same level of abstraction across methods, controlled vocabulary is used in the fields: principle, target, facility, data product, $H_0$ inference route, cosmic epoch and cosmological model dependence. The controlled vocabularies enable visualisation and direct method comparison. However, this categorisation will lose a certain level of detail, and the classification scheme always contains judgments.
 
 ### 2.2 Database Fields
 
-The definition of each field that describes the methods are listed below.
+The definition of each field that describes the methods is listed below.
 
 | Field                   | Definition                                                   |
 | ----------------------- | ------------------------------------------------------------ |
@@ -74,7 +74,7 @@ This field is useful because it prevents intermediate cosmological information, 
 
 #### Cosmic Epoch
 
-This field provides a simplified description of the redshift range. The boundaries are set at $z=0.15$ and $z=6$. Since $z=0.15$ approximately corresponds to the upper redshift limit commonly adopted for Hubble-flow SNe Ia in distance ladder, while $z=6$ roughly marks the end of the epoch of reionisation.
+This field provides a simplified description of the redshift range. The boundaries are set at $z=0.15$ and $z=6$. Since $z=0.15$ approximately corresponds to the upper redshift limit commonly adopted for Hubble-flow SNe Ia in distance ladder, while $z=6$ roughly marks the end of the epoch of reionisation. It is worth noting that this field is related to the observational epoch which differs from the calibration epoch. A case in point is baryon acoustic oscillations (BAO) + Big Bang Nucleosynthesis (BBN) method, where its observation targets lie between $z\approx0.1$ and $z \approx 4.2$, while the standard ruler (drag-epoch sound horizon) used is located at $z\approx 1060$. The actual expansion history it constrained is where its observation targets locate.
 
 | Category              | Definition       |
 | --------------------- | ---------------- |
@@ -86,11 +86,11 @@ This field provides a simplified description of the redshift range. The boundari
 
 This classification refers to the modelling required to translate the measured observables into $H_0$, rather than to the statistical precision or reliability of the method. Categories are assigned according to the intrinsic requirement of each method rather than to the modelling choices adopted in individual papers. 
 
-Methods in the 'no' category do not intrinsically require a specific dynamical cosmological model. When their relevant redshift range is sufficiently low, $H_0$ can in principle be inferred directly from the linear Hubble relation, $, or using a local cosmographic expansion $d_L(z)= \frac{c}{H_0} \left[z+ \frac{1-q_0}{2}z^2 - \frac{1-q_0-3q_0^2+j_0+\Omega_k}{6}z^3 + \mathcal{O}(z^4) \right]$ with parameters obtained by data fitting. 
+Methods in the 'no' category do not intrinsically require a specific dynamical cosmological model. When their relevant redshift range is sufficiently low, $H_0$ can in principle be inferred directly from the linear Hubble relation, $d_L(z)=\frac{cz}{H_0}$, or using a local cosmographic expansion $d_L(z)= \frac{c}{H_0} \left[z+ \frac{1-q_0}{2}z^2 - \frac{1-q_0-3q_0^2+j_0+\Omega_k}{6}z^3 + \mathcal{O}(z^4) \right]$ with parameters obtained by data fitting. Cosmic chronometer (CC) is an exception. Though it probes the redshift regime up to 2, extrapolating techniques that do not depend on the expansion history, such as Gaussian Process can be used to extrapolate $H(z)$ to $z=0$.
 
-For the methods in the 'weak' category, a dynamical expansion model, commonly of the form $H(z) = H_0 \sqrt{ \Omega_m(1+z)^3 + \Omega_\Lambda}$, is required to extrapolate measurements at finite redshift to $H_0$. The fast radio burst (FRB) dispersion measure-redshift (DM-z) method also requires an externally constrained cosmological parameter $\Omega_b$. However, as $\Omega_b$ has a direct physical interpretation and is independently constrained by multiple observational probes, this is classified as weak-dependence. 
+For the methods in the 'weak' category, a dynamical expansion model, commonly of the form $H(z) = H_0 \sqrt{ \Omega_m(1+z)^3 + \Omega_\Lambda}$, is required to extrapolate measurements at finite redshift to $H_0$. The fast radio burst (FRB) dispersion measure-redshift (DM-z) method also requires an externally constrained cosmological parameter $\Omega_b$. However, as $\Omega_b$ has a direct physical interpretation and is independently constrained by multiple observational probes, this is classified as weak-dependence. In addition, specific papers may have different methods to alleviate the mild dependence on cosmological parameters other than $H_0$. For example, in time-delay cosmography (TDC) method, some specific papers utilise the external cosmological probes, such as SN Ia, to constrain relative expansion history. However, as this database only records the intrinsic features of the methods, TDC is recorded as weak-dependence.
 
-The 'strong' dependence methods (e.g. cosmic microwave background (CMB)) have more direct use of early-universe physics than the 'medium' dependence method (e.g. baryon acoustic oscillations (BAO) + Big Bang Nucleosynthesis (BBN)). These categories broadly encompass methods commonly described in the literature as early-universe method.
+The 'strong' dependence methods (e.g. cosmic microwave background (CMB)) have more direct use of early-universe physics than the 'medium' dependence method (e.g. BAO+BBN). These categories broadly encompass methods commonly described in the literature as early-universe method.
 
 | Category | Definition                                                   |
 | -------- | ------------------------------------------------------------ |
@@ -101,7 +101,13 @@ The 'strong' dependence methods (e.g. cosmic microwave background (CMB)) have mo
 
 ## 3. Results
 
-### 3.1 Interpretation
+### 3.1 Visualisation
+
+The visualisation of this database is performed through webpages. 
+
+
+
+### 3.2 Interpretation
 
 Despite the diversity of observational techniques, many late-universe measurements can be understood in terms of obtaining information about cosmological distance and comparing it with redshift or recession velocity. The database makes the route by which this information is obtained explicit.
 
@@ -112,8 +118,6 @@ Several methods and distance indicators can extend the observational redshift ra
 It is also worth mentioning that the two indicators mentioned are standardisable candles which require calibration. Though they are not usually considered as part of the distance ladder, GRBs are often calibrated by SNe Ia or cosmic chronometers, and HII can be anchored by nearby giant HII regions. These calibration processes will introduce extra systematic uncertainties and dependencies. Methods are not automatically independent simply because they are not normally labelled as components of the conventional distance ladder. A related issue occurs for methods that share physical scales; to be specific, CMB and BAO+BBN methods. These measurements are observationally very different, but both use a standard ruler from pre-recombination physics.
 
 These dependencies suggest that a promising method is not the one which can achieve the smallest uncertainty, but the one that can provide decisive precision while being independent in the means of calibration, systematic errors, inference chain and cosmological model dependence.
-
-### 3.2 Interactive Website
 
 ## 4. Limitations
 
