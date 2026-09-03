@@ -9,7 +9,7 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "lens: 0.2-0.8\nsource: 1-3",
@@ -52,10 +52,6 @@
             {
               "controlled_vocabulary": "galaxy",
               "description": "galaxy (lens)"
-            },
-            {
-              "controlled_vocabulary": "cluster",
-              "description": "cluster (lens)"
             }
           ],
           "facility": [
@@ -88,10 +84,6 @@
             {
               "controlled_vocabulary": "galaxy",
               "description": "galaxy (lens)"
-            },
-            {
-              "controlled_vocabulary": "cluster",
-              "description": "cluster (lens)"
             }
           ],
           "facility": [
@@ -128,10 +120,6 @@
             {
               "controlled_vocabulary": "galaxy",
               "description": "galaxy (lens)"
-            },
-            {
-              "controlled_vocabulary": "cluster",
-              "description": "cluster (lens)"
             }
           ],
           "facility": [
@@ -165,10 +153,6 @@
             {
               "controlled_vocabulary": "galaxy",
               "description": "galaxy (lens)"
-            },
-            {
-              "controlled_vocabulary": "cluster",
-              "description": "cluster (lens)"
             }
           ],
           "facility": [
@@ -198,7 +182,7 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "accumulated effect inference"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "0.01-1.354",
@@ -305,7 +289,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "$\\approx 0.01$",
@@ -412,7 +396,7 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "host galaxy catalogue: <0.6",
@@ -496,7 +480,7 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "$z \\lesssim 1$",
@@ -551,7 +535,7 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "$z \\lesssim 1$",
@@ -626,11 +610,11 @@
       "id": "gamma-ray-attenuation",
       "name": "gamma-ray attenuation",
       "principle": "accumulated effect probe",
-      "details": "Gamma-ray photons from blazars pair-produce with EBL photons while propagating over cosmological distances, attenuating the observed spectrum in an energy- and redshift-dependent way.\nComparing observed blazar spectra against an assumed intrinsic spectral shape yields the observed optical depth.\nThe same optical depth can also be predicted theoretically, by combining EBL density and path length to that redshift, which depends on $H_0$.\nFitting the predicted and observed optical depth constrains $H_0$.",
+      "details": "Distance:\nThe GW waveform's amplitude and phase jointly provide the chirp mass and luminosity distance.\nRedshift:\nThere are identifiable features in the source-frame mass spectrum of black holes (e.g. the pair-instability mass gap), which allow the redshift to be inferred by comparing the detector-frame and assumed source-frame masses.",
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "accumulated effect inference"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "$\\leq 3.1$",
@@ -733,7 +717,7 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "$\\leq 0.89$",
@@ -865,7 +849,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "0.011-0.034",
@@ -969,7 +953,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "<0.05",
@@ -1053,7 +1037,7 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "differential expansion"
+        "differential expansion history"
       ],
       "redshift_range": {
         "display": "0.07-1.965",
@@ -1113,7 +1097,7 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "0.01-0.185",
@@ -1284,8 +1268,8 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "medium",
       "h0_inference_route": [
-        "differential expansion",
-        "integrated distance"
+        "differential expansion history",
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "targets: 0.1-4.2\nstandard ruler: $\\approx 1060$",
@@ -1435,7 +1419,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder geometric anchor"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "$\\approx 0$",
@@ -1488,7 +1472,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder geometric anchor"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "$\\approx 0$",
@@ -1596,7 +1580,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder first rung"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "<0.01",
@@ -1684,7 +1668,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder first rung"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "<0.01",
@@ -1740,7 +1724,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder first rung"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "<0.01",
@@ -1796,7 +1780,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder first rung"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "<0.003",
@@ -1883,7 +1867,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder first rung"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "<0.002",
@@ -1964,7 +1948,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder second rung"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "0.01-0.15",
@@ -2049,7 +2033,7 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder second rung"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "0.01-0.35",
@@ -2157,7 +2141,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder second rung"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "0.005-0.025",
@@ -2237,7 +2221,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder second rung"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "0.01-0.05",
@@ -2326,7 +2310,7 @@
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
-        "distance ladder second rung"
+        "distance ladder"
       ],
       "redshift_range": {
         "display": "0.01-0.1",
@@ -2411,11 +2395,11 @@
       "id": "hii-l-sigma-relation",
       "name": "HII L-σ relation",
       "principle": "standard candle",
-      "details": "Distance:\nThe HII galaxies and giant HII regions are empirically found to follow a common relation between H$\\beta$ luminosity and the velocity dispersion of the ionised gas.\nThe relation's zero point is calibrated using giant HII regions in nearby galaxies with independently measured distances.\nThe measured velocity dispersion predicts the intrinsic H$\\beta$ luminosity, which, when compared with the spectrophotometrically measured H$\\beta$ flux, yields the luminosity distance.\nVelocity:\nSpectroscopic redshifts of Hubble-flow H II galaxies.",
+      "details": "Distance:\nThe HII galaxies and giant HII regions are empirically found to follow a common relation between H$\\beta$ luminosity and the velocity dispersion of the ionised gas.\nThe relation's zero point is calibrated using giant HII regions in nearby galaxies with independently measured distances.\nThe measured velocity dispersion predicts the intrinsic H$\\beta$ luminosity, which, when compared with the spectrophotometrically measured H$\\beta$ flux, yields the luminosity distance.\nVelocity:\nSpectroscopic redshifts of HII galaxies.",
       "cosmic_epoch": "high redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "0.01-7.5",
@@ -2499,7 +2483,7 @@
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
-        "integrated distance"
+        "integrated expansion history"
       ],
       "redshift_range": {
         "display": "<5",

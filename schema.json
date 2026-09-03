@@ -316,32 +316,20 @@
       "assignment": "exact_text",
       "entries": [
         {
-          "value": "integrated distance",
-          "definition": "constrains a cosmological distance, which encodes the expansion history through an integral, and $H_0$ is obtained using the distance-redshift relation"
+          "value": "integrated expansion history",
+          "definition": "constrains an integrated quantity (e.g. distance), whose redshift dependence encodes the accumulated expansion history along the line of sight, and infers $H_0$ through its relation to the expansion history"
         },
         {
-          "value": "differential expansion",
+          "value": "differential expansion history",
           "definition": "constrains the expansion rate $H(z)$ directly, $H_0$ is inferred by extrapolating or fitting the expansion history to $z=0$"
-        },
-        {
-          "value": "accumulated effect inference",
-          "definition": "a physical effect is accumulated along the line of sight whose redshift dependence encodes cosmological path-length or expansion information, from which $H_0$ is inferred"
         },
         {
           "value": "global cosmological inference",
           "definition": "the observed data are compared with predictions from a full cosmological model, where $H_0$ is obtained simultaneously with other cosmological parameters through a global model fit"
         },
         {
-          "value": "distance ladder geometric anchor",
-          "definition": "a system whose distance is determined geometrically and is used to calibrate the absolute scale of the first-rung indicator"
-        },
-        {
-          "value": "distance ladder first rung",
-          "definition": "a nearby indicator calibrated by geometric anchors, which is used to measure distances to more distant galaxies hosting second-rung indicators and thereby calibrate the second rung"
-        },
-        {
-          "value": "distance ladder second rung",
-          "definition": "a more distant-reaching indicator calibrated by the first rung, which extends into the Hubble flow and is used to infer $H_0$ through the D-z relation"
+          "value": "distance ladder",
+          "definition": "determines $H_0$ by propagating an absolute distance calibration through a sequence of overlapping distance indicators, from geometric anchors to Hubble flow indicators"
         }
       ]
     },

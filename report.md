@@ -60,15 +60,12 @@ This field answers the question of where the physical scale or expansion informa
 
 This field is useful because it prevents intermediate cosmological information, such as $H(z)$, from being obscured by reducing every method immediately to a single $H_0$ value. If a method is an indicator in the distance ladder, it is indicated in this field.
 
-| Category                         | Definition                                                   |
-| -------------------------------- | ------------------------------------------------------------ |
-| integrated distance              | Constrains a cosmological distance, which encodes the expansion history through an integral, and $H_0$ is obtained using the distance-redshift relation. |
-| differential expansion           | Constrains the expansion rate $H(z)$ directly; $H_0$ is inferred by extrapolating or fitting the expansion history to $z=0$. |
-| accumulated effect inference     | A physical effect is accumulated along the line of sight whose redshift dependence encodes cosmological path-length or expansion information, from which $H_0$ is inferred. |
-| global cosmological inference    | The observed data are compared with predictions from a full cosmological model, where $H_0$ is obtained simultaneously with other cosmological parameters through a global model fit. |
-| distance ladder geometric anchor | A system whose distance is determined geometrically and is used to calibrate the absolute scale of the first-rung indicator. |
-| distance ladder first rung       | A nearby indicator calibrated by geometric anchors, which is used to measure distances to more distant galaxies hosting second-rung indicators and thereby calibrate the second rung. |
-| distance ladder second rung      | A more distant-reaching indicator calibrated by the first rung, which extends into the Hubble flow and is used to infer $H_0$ through the D-z relation. |
+| Category                       | Definition                                                   |
+| ------------------------------ | ------------------------------------------------------------ |
+| integrated expansion history   | Constrains an integrated quantity (e.g. distance), whose redshift dependence encodes the accumulated expansion history along the line of sight, and infers $H_0$ through its relation to the expansion history. |
+| differential expansion history | Constrains the expansion rate $H(z)$ directly, $H_0$ is inferred by extrapolating or fitting the expansion history to $z=0$. |
+| global cosmological inference  | The observed data are compared with predictions from a full cosmological model, where $H_0$ is obtained simultaneously with other cosmological parameters through a global model fit. |
+| distance ladder                | Determines $H_0$ by propagating an absolute distance calibration through a sequence of overlapping distance indicators, from geometric anchors to Hubble flow indicators. |
 
 #### Cosmic Epoch
 
@@ -107,7 +104,7 @@ The database is visualised through an interactive web-based explorer. The explor
 
 Despite the diversity of observational techniques, many late-universe measurements can be understood in terms of obtaining information about cosmological distance and comparing it with redshift or recession velocity. The database makes the route by which this information is obtained explicit.
 
-The distinction between integrated distance and differential expansion is particularly useful. An 'integral distance' measurement constrains a quantity such as luminosity or angular-diameter distance, which depends on the integral of expansion history. 'Differential expansion' probes constrain the differential expansion rate $H(z)$ more directly. Measurements classified as 'differential expansion', such as CC, do not necessarily need to be reduced immediately to a single value of $H_0$. Instead, their $H(z)$ measurements can be compared directly, preserving more redshift-dependent information and avoiding the need to assume a late-time expansion model. Specifically, the consistency between their $H(z)$ profiles can be evaluated by direct comparison, and any disagreement can be traced to either normalisation factors (corresponding to the $H_0$ value) or intrinsic shape (corresponding to the expansion history).
+The distinction between integrated and differential expansion history is particularly useful. An 'integral expansion history' measurement constrains a quantity such as luminosity or angular-diameter distance, which depends on the integral of expansion history. 'Differential expansion history' probes constrain the differential expansion rate $H(z)$ more directly. Measurements classified as 'differential expansion', such as CC, do not necessarily need to be reduced immediately to a single value of $H_0$. Instead, their $H(z)$ measurements can be compared directly, preserving more redshift-dependent information and avoiding the need to assume a late-time expansion model. Specifically, the consistency between their $H(z)$ profiles can be evaluated by direct comparison, and any disagreement can be traced to either normalisation factors (corresponding to the $H_0$ value) or intrinsic shape (corresponding to the expansion history).
 
 Several methods and distance indicators can extend the observational redshift range well beyond the range reached by the conventional distance ladder. HII galaxies and gamma-ray bursts (GRB) are two examples; the former have strong emission lines, and the latter have high luminosity, which enable them to remain detectable at high redshift. However, at increasing redshift, the relation between the measured distance and the present value $H_0$ becomes more sensitive to the assumed form of the expansion history. Therefore, high-redshift tracers are valuable as tests of consistency of the expansion history across redshift.
 
@@ -129,9 +126,10 @@ This project constructed a structured framework for comparing the existing metho
 
 
 
+https://zhnicex.github.io/hubble-constant-measurement-methods/
+
 ### Acknowledgement
 
 The interactive visualisation and data-processing scripts were developed with assistance from AI tools. All scientific content, including database design, method classification, and literature curation, was designed and organised by the author.
-
 
 
