@@ -66,7 +66,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "image"
             }
           ],
@@ -137,7 +137,7 @@
           "facility": [
             {
               "controlled_vocabulary": "EM: spectroscopic telescope",
-              "description": "integral-field or slit spectrographon a large telescope (e.g. Keck/KCWI, Keck/LRIS)"
+              "description": "integral-field or slit spectrograph on a large telescope (e.g. Keck/KCWI, Keck/LRIS)"
             }
           ],
           "data_product": [
@@ -174,7 +174,7 @@
           "facility": [
             {
               "controlled_vocabulary": "EM: spectroscopic telescope",
-              "description": "integral-field or slit spectrographon a large telescope (e.g. Keck/KCWI, Keck/LRIS)"
+              "description": "integral-field or slit spectrograph on a large telescope (e.g. Keck/KCWI, Keck/LRIS)"
             }
           ],
           "data_product": [
@@ -185,7 +185,7 @@
           ],
           "observation_role": "primary",
           "physical_quantities": [
-            "(spacially resolved) kinematics"
+            "(spatially resolved) kinematics"
           ]
         }
       ]
@@ -193,7 +193,7 @@
     {
       "id": "dispersion-measure-dm-z-relation",
       "name": "dispersion measure (DM)-z relation",
-      "principle": "accumulated-effect probe",
+      "principle": "accumulated effect probe",
       "details": "FRBs' observed DM includes contributions from the 'local' Universe (ISM and halo), the intergalactic medium (IGM), and the host galaxy.\nBy dedispersion, the total DM can be obtained from the dynamic spectrum.\nThe 'local' Universe contribution is subtracted using a Galactic electron-density model. The host-galaxy DM contribution is separated out by jointly fitting with other parameters.\nThe resulting intergalactic-medium DM-z relation (Macquart relation) constrains $H_0$.",
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
@@ -262,7 +262,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "(interferometric image)"
             }
           ],
@@ -308,12 +308,11 @@
         "integrated distance"
       ],
       "redshift_range": {
-        "display": "~0.01",
+        "display": "$\\approx 0.01$",
         "components": [
           {
             "role": null,
-            "value": 0.01,
-            "approximate": true
+            "value": 0.01
           }
         ],
         "z_max": 0.01,
@@ -336,7 +335,7 @@
           "facility": [
             {
               "controlled_vocabulary": "GW: interferometer network",
-              "description": "km-scale laser-interferometer GW detector network (LIGO, Virgo, KAGRA)"
+              "description": "km-scale laser-interferometer GW detector network (e.g. LIGO, Virgo, KAGRA)"
             }
           ],
           "data_product": [
@@ -448,7 +447,7 @@
           "facility": [
             {
               "controlled_vocabulary": "GW: interferometer network",
-              "description": "km-scale laser-interferometer GW detector network (LIGO, Virgo, KAGRA)"
+              "description": "km-scale laser-interferometer GW detector network (e.g. LIGO, Virgo, KAGRA)"
             }
           ],
           "data_product": [
@@ -493,25 +492,29 @@
       "id": "gravitational-wave-gw-spectral-siren",
       "name": "gravitational wave (GW) spectral siren",
       "principle": "standard siren",
-      "details": "There are identifiable features in the source-frame mass spectrum of black holes (e.g. the pair-instability mass gap), which allow the redshift to be inferred by comparing the detector-frame and assumed source-frame masses.",
+      "details": "Distance:\nThe GW waveform's amplitude and phase jointly provide the chirp mass and luminosity distance.\nRedshift:\nThere are identifiable features in the source-frame mass spectrum of black holes (e.g. the pair-instability mass gap), which allow the redshift to be inferred by comparing the detector-frame and assumed source-frame masses.",
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
         "integrated distance"
       ],
       "redshift_range": {
-        "display": "<0.8",
+        "display": "$z \\lesssim 1$",
         "components": [
           {
             "role": null,
-            "bound": "<",
-            "value": 0.8
+            "value": 1.0
           }
         ],
-        "z_max": 0.8,
-        "z_max_all_components": 0.8
+        "z_max": 1.0,
+        "z_max_all_components": 1.0
       },
-      "references": [],
+      "references": [
+        {
+          "text": "Magaña Hernandez & Palmese 2025",
+          "url": "https://arxiv.org/abs/2509.03607"
+        }
+      ],
       "observations": [
         {
           "target": [
@@ -523,7 +526,7 @@
           "facility": [
             {
               "controlled_vocabulary": "GW: interferometer network",
-              "description": "km-scale laser-interferometer GW detector network (LIGO, Virgo, KAGRA)"
+              "description": "km-scale laser-interferometer GW detector network (e.g. LIGO, Virgo, KAGRA)"
             }
           ],
           "data_product": [
@@ -544,25 +547,29 @@
       "id": "gravitational-wave-gw-tidal-siren",
       "name": "gravitational wave (GW) tidal siren",
       "principle": "standard siren",
-      "details": "Neutron stars experience tidal deformation during inspiral.\nTidal deformation parameters can be inferred from the GW phase evolution; combined with an assumed equation of state, this yields the source-frame mass.\nComparing the detector-frame and source-frame mass then determines the redshift.",
+      "details": "Distance:\nThe GW waveform's amplitude and phase jointly provide the chirp mass and luminosity distance.\nRedshift:\nNeutron stars experience tidal deformation during inspiral.\nTidal deformation parameters can be inferred from the GW phase evolution; combined with an assumed equation of state, this yields the source-frame mass.\nComparing the detector-frame and source-frame mass then determines the redshift.",
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
       "h0_inference_route": [
         "integrated distance"
       ],
       "redshift_range": {
-        "display": "<4",
+        "display": "$z \\lesssim 1$",
         "components": [
           {
             "role": null,
-            "bound": "<",
-            "value": 4.0
+            "value": 1.0
           }
         ],
-        "z_max": 4.0,
-        "z_max_all_components": 4.0
+        "z_max": 1.0,
+        "z_max_all_components": 1.0
       },
-      "references": [],
+      "references": [
+        {
+          "text": "Chatterjee et al. 2021",
+          "url": "https://doi.org/10.1103/PhysRevD.104.083528"
+        }
+      ],
       "observations": [
         {
           "target": [
@@ -618,7 +625,7 @@
     {
       "id": "gamma-ray-attenuation",
       "name": "gamma-ray attenuation",
-      "principle": "accumulated-effect probe",
+      "principle": "accumulated effect probe",
       "details": "Gamma-ray photons from blazars pair-produce with EBL photons while propagating over cosmological distances, attenuating the observed spectrum in an energy- and redshift-dependent way.\nComparing observed blazar spectra against an assumed intrinsic spectral shape yields the observed optical depth.\nThe same optical depth can also be predicted theoretically, by combining EBL density and path length to that redshift, which depends on $H_0$.\nFitting the predicted and observed optical depth constrains $H_0$.",
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "weak",
@@ -626,11 +633,11 @@
         "accumulated effect inference"
       ],
       "redshift_range": {
-        "display": "<3.1",
+        "display": "$\\leq 3.1$",
         "components": [
           {
             "role": null,
-            "bound": "<",
+            "bound": "<=",
             "value": 3.1
           }
         ],
@@ -654,7 +661,7 @@
           "facility": [
             {
               "controlled_vocabulary": "EM: other band telescope / interferometer",
-              "description": "space-based pair-conversion GeV gamma-ray telescope (Fermi-LAT)"
+              "description": "space-based pair-conversion telescope for GeV spectra (Fermi-LAT)"
             }
           ],
           "data_product": [
@@ -766,7 +773,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "image"
             }
           ],
@@ -790,7 +797,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "image"
             }
           ],
@@ -854,7 +861,7 @@
       "id": "megamaser",
       "name": "megamaser",
       "principle": "geometric",
-      "details": "Water masers in the edge-on accretion disk around compact object follows Keplerian orbital motion.\nObserved velocities with long-term acceleration monitoring in a disk model yields a purely geometric angular-diameter distance to the host galaxy.\nCombined with the galaxy's recession velocity, $H_0$ can be calculated directly.",
+      "details": "Distance:\nWater masers in the edge-on accretion disk around compact object follows Keplerian orbital motion.\nObserved velocities with long-term acceleration monitoring in a disk model yields a purely geometric angular-diameter distance to the host galaxy.\nVelocity:\nHost-galaxy spectroscopic redshifts are used, with corrections for peculiar velocities.",
       "cosmic_epoch": "local universe",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
@@ -872,7 +879,12 @@
         "z_max": 0.034,
         "z_max_all_components": 0.034
       },
-      "references": [],
+      "references": [
+        {
+          "text": "Pesce et al. 2020",
+          "url": "https://doi.org/10.3847/2041-8213/ab75f0"
+        }
+      ],
       "observations": [
         {
           "target": [
@@ -884,12 +896,12 @@
           "facility": [
             {
               "controlled_vocabulary": "EM: radio band telescope / interferometer",
-              "description": "22 GHz VLBI radio array for sub-milliarcsec mapping (e.g. VLBA + GBT + Effelsberg)"
+              "description": "22 GHz VLBI radio array for sub-milliarcsec mapping (e.g. VLBA)"
             }
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "image"
             }
           ],
@@ -908,7 +920,7 @@
           "facility": [
             {
               "controlled_vocabulary": "EM: radio band telescope / interferometer",
-              "description": "single-dish radio telescope for multi-year spectral monitoring (e.g. GBT)"
+              "description": "large single-dish radio telescope for spectral monitoring (e.g. GBT)"
             }
           ],
           "data_product": [
@@ -921,6 +933,30 @@
           "physical_quantities": [
             "line-of-sight velocity",
             "acceleration"
+          ]
+        },
+        {
+          "target": [
+            {
+              "controlled_vocabulary": "galaxy",
+              "description": "host galaxy"
+            }
+          ],
+          "facility": [
+            {
+              "controlled_vocabulary": "EM: spectroscopic telescope",
+              "description": "optical spectrograph"
+            }
+          ],
+          "data_product": [
+            {
+              "controlled_vocabulary": "spectrum",
+              "description": "spectrum"
+            }
+          ],
+          "observation_role": "auxiliary",
+          "physical_quantities": [
+            "redshift"
           ]
         }
       ]
@@ -1013,7 +1049,7 @@
       "id": "cosmic-chronometers-cc",
       "name": "cosmic chronometers (CC)",
       "principle": "standard clock",
-      "details": "For an FLRW metric the Hubble parameter obeys $H(z) = -\\frac{1}{1+z}\\frac{dz}{dt}$.\nMeasuring the age difference $dt$ between two passive-galaxy populations separated by a small redshift interval $dz$ yields $H(z)$ directly.\nDifferential ages are derived from spectral features calibrated by stellar population synthesis (SPS) models.\nReconstructing/extrapolating $H(z)$ to $z=0$ gives $H_0$.",
+      "details": "For an FLRW metric the Hubble parameter obeys $H(z) = -\\frac{1}{1+z}\\frac{dz}{dt}$.\nThe $4000\\,\\text{\\AA}$ break measured from galaxy spectra is calibrated with stellar population synthesis models to infer stellar population ages.\nMeasuring the age difference $dt$ between two passive-galaxy populations separated by a small redshift interval $dz$ yields $H(z)$ directly.\nReconstructing or extrapolating $H(z)$ to $z=0$ gives $H_0$.",
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
@@ -1031,7 +1067,16 @@
         "z_max": 1.965,
         "z_max_all_components": 1.965
       },
-      "references": [],
+      "references": [
+        {
+          "text": "Yu et al. 2018",
+          "url": "https://doi.org/10.3847/1538-4357/aab0a2"
+        },
+        {
+          "text": "Moresco et al. 2012",
+          "url": "https://doi.org/10.1088/1475-7516/2012/08/006"
+        }
+      ],
       "observations": [
         {
           "target": [
@@ -1043,7 +1088,7 @@
           "facility": [
             {
               "controlled_vocabulary": "EM: spectroscopic telescope",
-              "description": "optical/near-IR spectrograph on a large telescope"
+              "description": "optical/near-IR spectrograph with sufficient S/N"
             }
           ],
           "data_product": [
@@ -1187,12 +1232,11 @@
         "global cosmological inference"
       ],
       "redshift_range": {
-        "display": "~1090",
+        "display": "$\\approx 1090$",
         "components": [
           {
             "role": null,
-            "value": 1090.0,
-            "approximate": true
+            "value": 1090.0
           }
         ],
         "z_max": 1090.0,
@@ -1244,7 +1288,7 @@
         "integrated distance"
       ],
       "redshift_range": {
-        "display": "targets: 0.1-4.2\nstandard ruler: ~1060",
+        "display": "targets: 0.1-4.2\nstandard ruler: $\\approx 1060$",
         "components": [
           {
             "role": "targets",
@@ -1253,8 +1297,7 @@
           },
           {
             "role": "standard ruler",
-            "value": 1060.0,
-            "approximate": true
+            "value": 1060.0
           }
         ],
         "z_max": 4.2,
@@ -1285,7 +1328,7 @@
           "facility": [
             {
               "controlled_vocabulary": "EM: spectroscopic telescope",
-              "description": "wide-field optical spectroscopic survey facilities (e.g. Sloan/BOSS, Mayall/DESI)"
+              "description": "wide-field multi-object optical spectroscopic survey facilities (e.g. Sloan/BOSS, Mayall/DESI)"
             }
           ],
           "data_product": [
@@ -1310,7 +1353,7 @@
           "facility": [
             {
               "controlled_vocabulary": "EM: spectroscopic telescope",
-              "description": "high-resolution optical spectrograph on an 8–10 m telescope (e.g. Keck/HIRES, VLT/UVES)"
+              "description": "high-resolution optical spectrograph with sufficient S/N (e.g. Keck/HIRES, VLT/UVES)"
             }
           ],
           "data_product": [
@@ -1337,17 +1380,15 @@
         "global cosmological inference"
       ],
       "redshift_range": {
-        "display": "targets: ~1090\nstandard ruler: ~3400",
+        "display": "targets: $\\approx 1090$\nstandard ruler: $\\approx 3400$",
         "components": [
           {
             "role": "targets",
-            "value": 1090.0,
-            "approximate": true
+            "value": 1090.0
           },
           {
             "role": "standard ruler",
-            "value": 3400.0,
-            "approximate": true
+            "value": 3400.0
           }
         ],
         "z_max": 1090.0,
@@ -1428,7 +1469,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "image"
             }
           ],
@@ -1511,7 +1552,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "photometry"
             }
           ],
@@ -1623,7 +1664,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "photometry"
             }
           ],
@@ -1679,7 +1720,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "photometry"
             }
           ],
@@ -1735,7 +1776,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "photometry"
             }
           ],
@@ -1904,7 +1945,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "photometry"
             }
           ],
@@ -2004,7 +2045,7 @@
       "id": "type-ii-supernovae-sne-ii",
       "name": "Type II Supernovae (SNe II)",
       "principle": "standard candle",
-      "details": "Distance:\nIntrinsically brighter SNe II have higher expanding photophere velocity.\nMulti-band photometry of SNe II provides the apparent magnitude and colour, while optical spectroscopy measures the expansion velocity from absorption features. These quantities are used to correct the SNe II luminosity.\nThe corrected luminosities are then converted into luminosity distances using the calibrated SN II absolute magnitude.\nVelocity:\nHost-galaxy spectroscopic redshifts of Hubble-flow SNe II are used, with corrections for peculiar velocities.",
+      "details": "Distance:\nIntrinsically brighter SNe II have higher expanding photophere velocity.\nMulti-band photometry of SNe II provides the apparent magnitude and colour, while optical spectroscopy measures the expansion velocity from absorption features. These quantities are used to correct the SNe II luminosity.\nThe corrected luminosities are then converted into luminosity distances using the calibrated SN II absolute magnitude.\nVelocity:\nHost-galaxy spectroscopic redshifts are used, with corrections for peculiar velocities.",
       "cosmic_epoch": "intermediate redshift",
       "cosmological_model_dependence": "no",
       "h0_inference_route": [
@@ -2141,7 +2182,7 @@
           "target": [
             {
               "controlled_vocabulary": "galaxy",
-              "description": "galaxies (early-type / bulges of spiral galaxies (old stellar population))"
+              "description": "galaxies (early-type or bulges of spiral galaxies (old stellar population))"
             }
           ],
           "facility": [
@@ -2152,7 +2193,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "image"
             }
           ],
@@ -2166,7 +2207,7 @@
           "target": [
             {
               "controlled_vocabulary": "galaxy",
-              "description": "galaxies (early-type / bulges of spiral galaxies (old stellar population))"
+              "description": "galaxies (early-type or bulges of spiral galaxies (old stellar population))"
             }
           ],
           "facility": [
@@ -2265,7 +2306,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "photometry"
             }
           ],
@@ -2325,7 +2366,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "image"
             }
           ],
@@ -2439,7 +2480,7 @@
           ],
           "data_product": [
             {
-              "controlled_vocabulary": "image / photometry",
+              "controlled_vocabulary": "image/photometry",
               "description": "spectrophotometry"
             }
           ],

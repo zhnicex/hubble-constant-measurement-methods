@@ -50,7 +50,7 @@
       "controlled_vocabulary": false
     },
     "details": {
-      "label": "Detail",
+      "label": "Details",
       "definition": null,
       "source_column": "G",
       "scope": "method",
@@ -67,7 +67,7 @@
     },
     "redshift_range": {
       "label": "Redshift Range",
-      "definition": "redshift range directly used in published measurements or inferences of $H_0$",
+      "definition": "redshift range directly used in published $H_0$ measurements or inferences when available; otherwise, the forecast redshift range for methods not yet applied to $H_0$ measurements",
       "source_column": "I",
       "scope": "method",
       "type": "structured_redshift",
@@ -90,7 +90,7 @@
       "controlled_vocabulary": true
     },
     "references": {
-      "label": "Reference",
+      "label": "References",
       "definition": null,
       "source_column": "L",
       "scope": "method",
@@ -130,7 +130,7 @@
           "definition": "an absolute age or a standardisable differential age interval is inferred from astrophysical evolution"
         },
         {
-          "value": "accumulated-effect probe",
+          "value": "accumulated effect probe",
           "definition": "cosmological path-length or expansion information is encoded in a propagation effect accumulated along the line of sight"
         }
       ]
@@ -260,7 +260,7 @@
       "assignment": "style_legend",
       "entries": [
         {
-          "value": "image / photometry",
+          "value": "image/photometry",
           "definition": null,
           "style": {
             "font_color": "#FF0000",
@@ -371,7 +371,7 @@
         },
         {
           "value": "weak",
-          "definition": "requires assumptions about the late-time expansion history and/or externally constrained cosmological parameters ($\\Omega_b$)"
+          "definition": "requires assumptions about the late-time expansion history or externally constrained $\\Omega_b$"
         },
         {
           "value": "medium",
