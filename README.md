@@ -31,7 +31,7 @@ Each method is described using the following fields.
 | Cosmic Epoch                  | The cosmic epoch reached by observations used in an $H_0$ measurement or inference, classified according to the maximum redshift used. |
 | Cosmological Model Dependence | Degree to which the inference relies on assumptions about cosmological physics or expansion history. |
 
-The classification framework for *Principle*, *$H_0$ Inference Route* and *Cosmological Model Dependence* is outlined below.
+The classification framework for *Principle*, $H_0$ *Inference Route* and *Cosmological Model Dependence* is outlined below.
 
 *Principle*:
 
@@ -44,7 +44,7 @@ The classification framework for *Principle*, *$H_0$ Inference Route* and *Cosmo
 | standard clock           | An absolute age or a standardisable differential age interval is inferred from astrophysical evolution. |
 | accumulated-effect probe | Cosmological path-length or expansion information is encoded in a propagation effect accumulated along the line of sight. |
 
-*$H_0$ Inference Route*:
+$H_0$ *Inference Route*:
 
 | Category                       | Definition                                                   |
 | ------------------------------ | ------------------------------------------------------------ |
